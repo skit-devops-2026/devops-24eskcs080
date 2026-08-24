@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to your Spendly expense tracker account.">
+  <title>Sign in | Spendly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body class="auth-page login-page">
+  <!-- ===== Login Page Header ===== -->
+  <header class="auth-header"><a class="brand" href="index.html" aria-label="Spendly home"><span class="brand-mark">S</span><span>spendly</span></a><a class="auth-back" href="index.html">← Back to home</a></header>
+
+  <!-- ===== Login Form ===== -->
+  <main class="login-layout"><section class="auth-card login-card"><p class="eyebrow"><span class="sparkle">✦</span> Welcome back</p><h1>Good to see<br><em>you again.</em></h1><p class="login-intro">Sign in to continue tracking your money with confidence.</p>
+    <form class="auth-form" data-demo-form data-redirect="add-expense.html"><label>Email address<input type="email" name="email" placeholder="you@example.com" autocomplete="email" required></label><button class="button auth-submit" type="submit">Continue with email <span>→</span></button><p class="form-message" aria-live="polite"></p></form>
+    <div class="auth-divider"><span>or</span></div>
+    <!-- Connect this button to Google Identity Services when the backend is added. -->
+    <button class="google-button" type="button" data-google-button><span class="google-g">G</span> Continue with Google</button>
+    <p class="auth-terms">New to Spendly? <a href="signup.html">Create an account</a></p>
+  </section></main>
+  <script src="script.js"></script>
+</body>
+</html>

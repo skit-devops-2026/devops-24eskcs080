@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple personal expense tracker that helps you stay on top of your money.">
+  <title>Spendly | Personal Expense Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <!-- ===== Site Header / Navigation ===== -->
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Spendly home"><span class="brand-mark">S</span><span>spendly</span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="#features">Features</a><a href="#how-it-works">How it works</a><a href="about.html">About</a></nav>
+    <div class="header-actions"><a class="sign-in" href="login.html">Sign in</a><a class="button button-small" href="signup.html">Get started <span>→</span></a></div>
+  </header>
+
+  <main id="home">
+    <!-- ===== Hero Section ===== -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="sparkle">✦</span> Your money, made simple</p>
+        <h1>Spend smarter.<br><em>Live freer.</em></h1>
+        <p class="hero-text">A beautifully simple way to track your spending, grow your savings, and feel confident about every rupee.</p>
+        <div class="hero-buttons"><a class="button" href="#start">Start tracking free <span>→</span></a><a class="watch-link" href="#how-it-works"><span class="play-icon">▶</span> See how it works</a></div>
+        <div class="hero-proof"><div class="avatar-stack" aria-label="Happy Spendly users"><span class="avatar avatar-one">A</span><span class="avatar avatar-two">R</span><span class="avatar avatar-three">M</span></div><p><strong>10,000+</strong> people are spending<br>more intentionally</p></div>
+      </div>
+
+      <!-- Dashboard Preview Card -->
+      <div class="dashboard-wrap" aria-label="Expense tracker dashboard preview">
+        <div class="decor decor-top"></div><div class="decor decor-bottom"></div>
+        <article class="dashboard-card">
+          <div class="dashboard-topbar"><div class="dashboard-user"><span class="user-avatar">👩🏽</span><div><span>Good morning,</span><strong>Priya!</strong></div></div><button class="more-button" aria-label="More options">•••</button></div>
+          <div class="balance-row"><div><p>Total balance</p><h2>₹42,680<span>.50</span></h2></div><span class="balance-icon">↗</span></div>
+          <div class="stat-grid"><div class="stat income"><span class="stat-icon">↓</span><p>Income</p><strong>₹68,500</strong><small>+12.5% this month</small></div><div class="stat expense"><span class="stat-icon">↑</span><p>Expenses</p><strong>₹25,819</strong><small>−8.2% this month</small></div></div>
+          <div class="spending-card"><div class="card-heading"><div><p>Your spending</p><strong>₹25,819 <span>this month</span></strong></div><button>Monthly⌄</button></div><div class="chart" aria-label="Monthly spending chart"><div class="chart-line line-one"></div><div class="chart-line line-two"></div><div class="chart-line line-three"></div><svg viewBox="0 0 400 126" role="img" aria-label="Spending trend rising and falling throughout the month" preserveAspectRatio="none"><defs><linearGradient id="area-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#de754d" stop-opacity=".27"/><stop offset="100%" stop-color="#de754d" stop-opacity="0"/></linearGradient></defs><path d="M0 89 C22 74 34 79 51 67 S79 77 99 47 S126 64 145 57 S173 76 192 72 S219 50 239 55 S269 66 288 42 S321 47 342 29 S370 41 400 14 L400 126 L0 126Z" fill="url(#area-fill)"/><path d="M0 89 C22 74 34 79 51 67 S79 77 99 47 S126 64 145 57 S173 76 192 72 S219 50 239 55 S269 66 288 42 S321 47 342 29 S370 41 400 14" fill="none" stroke="#d96843" stroke-width="3"/></svg><div class="chart-labels"><span>1 May</span><span>7 May</span><span>14 May</span><span>21 May</span><span>31 May</span></div></div></div>
+          <div class="recent"><div class="recent-title"><strong>Recent transactions</strong><a href="#transactions">View all</a></div><div class="transaction"><span class="transaction-icon">🛍</span><span>Groceries <small>Today, 10:42 AM</small></span><strong>− ₹1,240</strong></div></div>
+        </article>
+        <div class="saving-note"><span>✦</span><div><strong>Nice work!</strong><p>You've saved ₹4,200 this month.</p></div></div>
+      </div>
+    </section>
+
+    <!-- ===== How It Works Slideshow ===== -->
+    <section class="how-it-works" id="how-it-works" aria-labelledby="how-it-works-title">
+      <div class="how-heading"><div><p class="eyebrow"><span class="sparkle">✦</span> Made for everyday life</p><h2 id="how-it-works-title">A clearer path to<br><em>better money habits.</em></h2></div><p>From your first expense to your next big goal, Spendly keeps every step simple.</p></div>
+      <div class="slideshow">
+        <div class="slide-tabs" role="tablist" aria-label="How Spendly works">
+          <button class="slide-tab is-active" type="button" role="tab" aria-selected="true" data-slide="0"><span>01</span> Add your expenses</button>
+          <button class="slide-tab" type="button" role="tab" aria-selected="false" data-slide="1"><span>02</span> See your patterns</button>
+          <button class="slide-tab" type="button" role="tab" aria-selected="false" data-slide="2"><span>03</span> Reach your goals</button>
+        </div>
+
+        <div class="slides">
+          <!-- Slide 1: Add expenses -->
+          <article class="slide slide-one is-active"><div class="slide-copy"><span class="step-number">01</span><h3>Log an expense in<br>just a few seconds.</h3><p>Add purchases whenever they happen, choose a category, and let Spendly do the organising for you.</p><a href="#start" class="text-link">Start tracking <span>→</span></a></div><div class="slide-visual add-expense-card"><div class="phone-card"><div class="phone-top"><span>9:41</span><span>● ● ●</span></div><p class="phone-label">New expense</p><strong class="expense-value">₹ 1,240</strong><div class="category-pill"><span>🛍</span> Groceries <b>⌄</b></div><div class="mini-keypad"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>.</span><span>0</span><span>⌫</span></div><button>Add expense</button></div><div class="float-tag tag-grocery">✦ Categorised</div></div></article>
+          <!-- Slide 2: Understand spending -->
+          <article class="slide slide-two"><div class="slide-copy"><span class="step-number">02</span><h3>Know exactly where<br>your money goes.</h3><p>Friendly visual summaries turn your spending into insights you can actually use.</p><a href="#start" class="text-link">Explore insights <span>→</span></a></div><div class="slide-visual pattern-card"><div class="insight-card"><p>May spending</p><strong>₹25,819</strong><div class="donut"><span>72%</span></div><div class="legend"><span><i class="dot food"></i>Food &amp; drinks</span><b>₹8,920</b><span><i class="dot travel"></i>Travel</span><b>₹5,440</b></div></div><div class="float-tag tag-insight">↗ 12% less than April</div></div></article>
+          <!-- Slide 3: Build savings -->
+          <article class="slide slide-three"><div class="slide-copy"><span class="step-number">03</span><h3>Turn small choices into<br>meaningful progress.</h3><p>Set a goal, watch your savings grow, and celebrate the momentum along the way.</p><a href="#start" class="text-link">Set a goal <span>→</span></a></div><div class="slide-visual goal-card"><div class="goal-progress"><span class="goal-emoji">✈️</span><p>Goa getaway</p><strong>₹18,400 <small>of ₹25,000</small></strong><div class="progress-track"><span></span></div><b>73% there</b></div><div class="float-tag tag-goal">✦ You're doing great!</div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Brand / Trust Strip ===== -->
+    <section class="trust-strip" aria-label="Spendly benefits"><p>Built for a calmer<br>relationship with money</p><div><span class="trust-icon">◎</span><strong>Private &amp; secure</strong></div><div><span class="trust-icon">⌁</span><strong>Always in sync</strong></div><div><span class="trust-icon">♧</span><strong>Made for real life</strong></div></section>
+
+    <!-- ===== Dashboard Gallery Slideshow ===== -->
+    <section class="dashboard-gallery" id="dashboard-gallery" aria-labelledby="gallery-title">
+      <div class="gallery-heading"><div><p class="eyebrow"><span class="sparkle">✦</span> Your financial picture</p><h2 id="gallery-title">Insights that make<br><em>every rupee count.</em></h2></div><p>Explore the simple dashboards that show what you spend, where it goes, and how to take control.</p></div>
+      <div class="image-slider">
+        <div class="gallery-images">
+          <figure class="gallery-image image-one is-active"><img src="images/img1.webp" alt="Spendly overview dashboard with total balance, income, expenses and spending chart"><figcaption><span>01</span><div><strong>See the whole picture</strong><p>Your balance, income and monthly activity in one calm view.</p></div></figcaption></figure>
+          <figure class="gallery-image image-two"><img src="images/img2.webp" alt="Spendly analysis dashboard with category chart and weekly spending comparison"><figcaption><span>02</span><div><strong>Find your spending patterns</strong><p>Learn which categories need a little more attention.</p></div></figcaption></figure>
+          <figure class="gallery-image image-three"><img src="images/img3.jpg" alt="Spendly budgets dashboard showing savings goals and category limits"><figcaption><span>03</span><div><strong>Stay in control</strong><p>Set limits and goals that work for your real life.</p></div></figcaption></figure>
+        </div>
+        <div class="gallery-controls" role="tablist" aria-label="Dashboard examples"><button class="is-active" type="button" aria-label="Show overview dashboard" aria-selected="true" data-slide="0">01</button><button type="button" aria-label="Show spending analysis dashboard" aria-selected="false" data-slide="1">02</button><button type="button" aria-label="Show budget goals dashboard" aria-selected="false" data-slide="2">03</button></div>
+      </div>
+    </section>
+
+    <!-- ===== Features Section ===== -->
+    <section class="features" id="features"><p class="eyebrow"><span class="sparkle">✦</span> Everything you need</p><h2>Less spreadsheet.<br>More <em>peace of mind.</em></h2><p>Simple tools that help you understand your money without the stress.</p></section>
+  </main>
+
+  <!-- ===== Site Footer ===== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-intro">
+        <a class="brand" href="#home" aria-label="Spendly home"><span class="brand-mark">S</span><span>spendly</span></a>
+        <p>A more thoughtful way to manage your everyday money.</p>
+        <div class="social-links" aria-label="Social media links"><a href="#instagram" aria-label="Instagram">◎</a><a href="#twitter" aria-label="Twitter">𝕏</a><a href="#linkedin" aria-label="LinkedIn">in</a></div>
+      </div>
+      <div class="footer-links">
+        <div><h3>Product</h3><a href="features.html">Features</a><a href="#how-it-works">How it works</a><a href="#pricing">Pricing</a></div>
+        <div><h3>Company</h3><a href="about.html">About us</a><a href="stories.html">Stories</a><a href="contact.html">Contact</a></div>
+        <div><h3>Support</h3><a href="help.html">Help centre</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms of use</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Spendly. Made with care in India.</p><p>Your privacy matters. Always.</p></div>
+  </footer>
+  <!-- ===== Slideshow Interactions ===== -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create your Spendly expense tracker account.">
+  <title>Create account | Spendly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body class="auth-page">
+  <!-- ===== Sign-Up Page Header ===== -->
+  <header class="auth-header"><a class="brand" href="index.html" aria-label="Spendly home"><span class="brand-mark">S</span><span>spendly</span></a><a class="auth-back" href="index.html">← Back to home</a></header>
+
+  <!-- ===== Sign-Up Form ===== -->
+  <main class="auth-layout"><section class="auth-welcome"><p class="eyebrow"><span class="sparkle">✦</span> A fresh start</p><h1>Let’s make money<br><em>feel simpler.</em></h1><p>Tell us a little about yourself. We’ll use it to make your Spendly experience more relevant to your life.</p><div class="auth-note"><span>✦</span><p>Your information stays private and is never sold.</p></div></section>
+  <section class="auth-card"><div class="auth-card-heading"><h2>Create your account</h2><p>Already have an account? <a href="login.html">Sign in</a></p></div>
+    <form class="auth-form" data-demo-form data-redirect="add-expense.html">
+      <!-- Personal Details -->
+      <div class="form-row"><label>Full name<input type="text" name="name" placeholder="e.g. Priya Sharma" autocomplete="name" required></label><label>Date of birth<input type="date" name="dob" autocomplete="bday" required></label></div>
+      <label>Email address<input type="email" name="email" placeholder="you@example.com" autocomplete="email" required></label>
+      <!-- Customer Category -->
+      <fieldset><legend>What best describes you?</legend><div class="profession-grid"><label class="choice"><input type="radio" name="profession" value="student" required><span>🎓</span><b>Student</b><small>Learning &amp; growing</small></label><label class="choice"><input type="radio" name="profession" value="salaried"><span>💼</span><b>Salaried employee</b><small>Working professional</small></label><label class="choice"><input type="radio" name="profession" value="business"><span>🚀</span><b>Business person</b><small>Building something</small></label><label class="choice"><input type="radio" name="profession" value="retired"><span>🌿</span><b>Retired</b><small>Enjoying the next chapter</small></label></div></fieldset>
+      <!-- Type “in” in this dropdown to jump to India (+91). -->
+      <label>Phone number<div class="phone-input-group"><select name="country-code" aria-label="Country code"><option value="+91" selected>India (+91)</option><option value="+1">United States (+1)</option><option value="+44">United Kingdom (+44)</option><option value="+61">Australia (+61)</option><option value="+971">United Arab Emirates (+971)</option><option value="+65">Singapore (+65)</option><option value="+49">Germany (+49)</option><option value="+33">France (+33)</option><option value="+81">Japan (+81)</option></select><input type="tel" name="phone" placeholder="98765 43210" autocomplete="tel-national" inputmode="numeric" pattern="[0-9]{7,15}" title="Enter 7 to 15 digits." required></div></label>
+      <button class="button auth-submit" type="submit">Create account <span>→</span></button><p class="form-message" aria-live="polite"></p>
+    </form>
+    <p class="auth-terms">By continuing, you agree to our <a href="terms.html">Terms of use</a> and <a href="privacy.html">Privacy policy</a>.</p>
+  </section></main>
+  <script src="script.js"></script>
+</body>
+</html>

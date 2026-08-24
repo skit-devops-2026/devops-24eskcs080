@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Add your expenses to Spendly, grouped by the categories that fit your life.">
+  <title>Add your expenses | Spendly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body class="expense-page">
+  <!-- ===== Header ===== -->
+  <header class="auth-header"><a class="brand" href="index.html" aria-label="Spendly home"><span class="brand-mark">S</span><span>spendly</span></a><a class="auth-back" href="index.html">← Back to home</a></header>
+
+  <!-- ===== Intro ===== -->
+  <section class="page-hero expense-hero"><p class="eyebrow"><span class="sparkle">✦</span> Add your expenses</p><h1>Tell us where<br><em>your money goes.</em></h1><p>Pick the profile that fits you best, then fill in what applies. You can always come back and update it.</p></section>
+
+  <!-- ===== Expense Form ===== -->
+  <main class="expense-shell">
+    <form class="expense-card" id="expenseForm" novalidate>
+      <!-- Step 1: choose a profile -->
+      <p class="expense-step-label"><span>1</span> Who does this describe best?</p>
+      <div class="persona-grid">
+        <label class="choice"><input type="radio" name="persona" value="student" required><span>🎓</span><b>Student</b><small>Learning &amp; growing</small></label>
+        <label class="choice"><input type="radio" name="persona" value="salaried"><span>💼</span><b>Salaried employee</b><small>Working professional</small></label>
+        <label class="choice"><input type="radio" name="persona" value="business"><span>🚀</span><b>Business person</b><small>Building something</small></label>
+        <label class="choice"><input type="radio" name="persona" value="retired"><span>🌿</span><b>Retired</b><small>Enjoying the next chapter</small></label>
+      </div>
+
+      <!-- Step 2: categories for the chosen profile, filled in by expense.js -->
+      <div id="expenseStep2" style="display:none">
+        <div class="expense-persona-bar" id="personaBar"></div>
+        <p class="expense-step-label"><span>2</span> How much goes to each?</p>
+        <div class="category-grid" id="categoryFields"></div>
+
+        <div class="expense-total-bar"><p>Total this month</p><strong id="expenseTotal">₹0</strong></div>
+        <div class="expense-actions"><button class="button auth-submit" type="submit">Save expenditure <span>→</span></button></div>
+        <p class="form-message" aria-live="polite"></p>
+
+        <!-- Breakdown, shown after saving -->
+        <div class="breakdown" id="breakdown"><h3>Your breakdown</h3><div id="breakdownList"></div></div>
+      </div>
+    </form>
+  </main>
+
+  <script src="expense.js"></script>
+</body>
+</html>
