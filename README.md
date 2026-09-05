@@ -7,7 +7,7 @@
 
 | Roll No. | Name | GitHub username |
 |---|---|---|
-| 24ESKCS080 | BHANU PRATAP SINGH | bpsRathore777 |
+| 24ESKCS080 | BHANU PRATAP SINGH | bhanu123-abc|
 
 ## About
 
