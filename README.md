@@ -1,4 +1,4 @@
-#Personel Expense Manager
+# Personal Expense Tracker
 
 > Replace every angle-bracket placeholder below. The hygiene check in CI will
 > fail until you do.
@@ -7,17 +7,17 @@
 
 | Roll No. | Name | GitHub username |
 |---|---|---|
-| 24ESKCS080 | BHANU PRATAP SINGH | bhanu123-abc|
+| 24ESKCS080 | Bhanu Pratap Singh | bhanu123-abc |
 
 ## About
 
-
+Personal Expense Tracker is a web-based application designed to help users manage and track their daily expenses. It allows users to add expenses, organize their financial information, and monitor their spending and savings goals through an interactive interface.
 
 ## Tech stack
 
-- Frontend: HTML , CSS , Javascript
-- Backend: 
-- Database: 
+Frontend: HTML, CSS, JavaScript
+Backend: Not implemented yet
+Database: Not implemented yet
 
 ## Running locally
 
