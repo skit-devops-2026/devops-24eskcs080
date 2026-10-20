@@ -30,3 +30,17 @@ test('expense profiles have nonempty categories with unique IDs', () => {
     assert.equal(new Set(ids).size, ids.length, `${profile} category IDs should be unique`);
   }
 });
+test('expense categories include labels and icons', () => {
+    const source = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
+    const match = source.match(/const SPENDLY_PERSONAS = (\{[\s\S]*?\n\});/);
+    assert.ok(match, 'SPENDLY_PERSONAS data should exist in app.js');
+  
+    const personas = JSON.parse(JSON.stringify(vm.runInNewContext(`(${match[1]})`)));
+  
+    for (const [profile, details] of Object.entries(personas)) {
+      for (const category of details.categories) {
+        assert.ok(category.label.trim(), `${profile} category should have a label`);
+        assert.ok(category.icon.trim(), `${profile} category should have an icon`);
+      }
+    }
+  });
