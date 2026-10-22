@@ -1,8 +1,5 @@
 # Personal Expense Tracker
 
-> Replace every angle-bracket placeholder below. The hygiene check in CI will
-> fail until you do.
-
 ## Author
 
 | Roll No. | Name | GitHub username |
@@ -15,9 +12,10 @@ Personal Expense Tracker is a web-based application designed to help users manag
 
 ## Tech stack
 
-Frontend: HTML, CSS, JavaScript
-Backend: Not implemented yet
-Database: Not implemented yet
+- Frontend: HTML, CSS, JavaScript
+- Backend: Not implemented yet
+- Database: Not implemented yet
+- DevOps: Docker, GitHub Actions, Jenkins, Prometheus, Grafana, Render
 
 ## Running locally
 
@@ -28,9 +26,18 @@ make run
 
 ## Live URL
 
-<Add once M5 is done. Until then, leave as is.>
+https://personal-expense-tracker-latest.onrender.com
+
+The app runs on Render's free tier, so the first load after a period of inactivity can take about a minute.
+
+## Docker image
+
+`bhanu123abc/personal-expense-tracker:latest` on Docker Hub.
+
+## Monitoring
+
+Run `docker compose up -d` to start the site (http://localhost:8080), Prometheus (http://localhost:9090) and Grafana (http://localhost:3000). Blackbox Exporter probes the site, and the Grafana dashboard shows availability and response time. Configuration is in `monitoring/` and screenshots are in `docs/`.
 
 ## Health endpoint
 
-`GET /health` returns the running commit SHA. See `Makefile` and the milestone
-sheet for why this is required.
+The app is a static site served by nginx, so it has no separate `/health` route. Availability is checked by probing `/` with Blackbox Exporter (see Monitoring above).
