@@ -102,3 +102,24 @@ input.has-error { border-color: #b3261c; }
 .password-wrap { position: relative; display: block; }
 .password-wrap input { width: 100%; padding-right: 4.5rem; box-sizing: border-box; }
 .password-toggle { position: absolute; right: .6rem; top: 50%; transform: translateY(-50%); border: 0; background: none; color: inherit; font: inherit; font-size: .85rem; text-decoration: underline; cursor: pointer; }
+
+/* ===== Transactions ===== */
+.tx-page { max-width: 760px; margin: 2rem auto; padding: 0 1.25rem; }
+.tx-summary { margin: .25rem 0 1rem; }
+.tx-status { min-height: 1.4em; }
+.tx-list { list-style: none; margin: 0; padding: 0; }
+.tx-row { display: grid; grid-template-columns: 6.5rem 7rem 1fr auto; gap: .75rem; padding: .75rem 0; border-bottom: 1px solid rgba(0,0,0,.1); align-items: center; }
+.tx-amount { font-weight: 600; }
+@media (max-width: 600px) { .tx-row { grid-template-columns: 1fr auto; } .tx-date, .tx-cat { font-size: .85rem; } }
+
+.tx-filter { display: block; margin: 0 0 1rem; font-weight: 600; }
+.tx-filter select { display: block; margin-top: .35rem; padding: .5rem .75rem; font: inherit; border-radius: .5rem; }
+
+/* ===== FAQ accordion ===== */
+.faq-item { border-bottom: 1px solid rgba(0,0,0,.12); }
+.faq-item h2 { margin: 0; }
+.faq-question { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 1rem 0; border: 0; background: none; font: inherit; font-size: 1.15rem; font-weight: 600; text-align: left; color: inherit; cursor: pointer; }
+.faq-question::after { content: "+"; font-size: 1.4rem; }
+.faq-question[aria-expanded="true"]::after { content: "–"; }
+.faq-question:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.faq-answer { padding: 0 0 1rem; }

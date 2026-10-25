@@ -32,18 +32,34 @@
       <p>Find quick answers about getting started with Spendly.</p>
     </section>
 
-    <section class="content-section">
-      <h2>Getting started</h2>
-      <p>Create an account, sign in, and use the Add Expense page to record your spending.</p>
+    <section class="content-section faq">
+      <div class="faq-item">
+        <h2><button type="button" class="faq-question" id="faq-btn-1" aria-expanded="false" aria-controls="faq-1">Getting started</button></h2>
+        <div class="faq-answer" id="faq-1" role="region" aria-labelledby="faq-btn-1">
+          <p>Create an account, sign in, and use the Add Expense page to record your spending.</p>
+        </div>
+      </div>
 
-      <h2>Adding an expense</h2>
-      <p>Enter the amount, choose a category, add the date and an optional note, then save the expense.</p>
+      <div class="faq-item">
+        <h2><button type="button" class="faq-question" id="faq-btn-2" aria-expanded="false" aria-controls="faq-2">Adding an expense</button></h2>
+        <div class="faq-answer" id="faq-2" role="region" aria-labelledby="faq-btn-2">
+          <p>Enter the amount, choose a category, add the date and an optional note, then save the expense.</p>
+        </div>
+      </div>
 
-      <h2>Managing your account</h2>
-      <p>You can sign in from any device. Account and expense storage will be added in a later update.</p>
+      <div class="faq-item">
+        <h2><button type="button" class="faq-question" id="faq-btn-3" aria-expanded="false" aria-controls="faq-3">Managing your account</button></h2>
+        <div class="faq-answer" id="faq-3" role="region" aria-labelledby="faq-btn-3">
+          <p>You can sign in from any device. Account and expense storage will be added in a later update.</p>
+        </div>
+      </div>
 
-      <h2>Need more help?</h2>
-      <p>Use the <a href="contact.html">Contact</a> page to send us a message.</p>
+      <div class="faq-item">
+        <h2><button type="button" class="faq-question" id="faq-btn-4" aria-expanded="false" aria-controls="faq-4">Need more help?</button></h2>
+        <div class="faq-answer" id="faq-4" role="region" aria-labelledby="faq-btn-4">
+          <p>Use the <a href="contact.html">Contact</a> page to send us a message.</p>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -55,7 +71,8 @@
       <a href="help.html">Help centre</a>
     </nav>
   </footer>
-
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="accordion.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
