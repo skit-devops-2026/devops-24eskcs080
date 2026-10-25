@@ -16,12 +16,18 @@
 
   <!-- ===== Login Form ===== -->
   <main class="login-layout"><section class="auth-card login-card"><p class="eyebrow"><span class="sparkle">✦</span> Welcome back</p><h1>Good to see<br><em>you again.</em></h1><p class="login-intro">Sign in to continue tracking your money with confidence.</p>
-    <form class="auth-form" data-demo-form data-redirect="add-expense.html"><label>Email address<input type="email" name="email" placeholder="you@example.com" autocomplete="email" required></label><button class="button auth-submit" type="submit">Continue with email <span>→</span></button><p class="form-message" aria-live="polite"></p></form>
+    <form class="auth-form" data-demo-form data-validate="login" novalidate data-redirect="add-expense.html">
+      <label>Email address<input type="email" name="email" placeholder="you@example.com" autocomplete="email" required></label>
+      <label>Password<input type="password" name="password" placeholder="Your password" autocomplete="current-password" required></label>
+      <button class="button auth-submit" type="submit">Continue with email <span>→</span></button>
+      <p class="form-message" aria-live="polite"></p>
+    </form>    
     <div class="auth-divider"><span>or</span></div>
     <!-- Connect this button to Google Identity Services when the backend is added. -->
     <button class="google-button" type="button" data-google-button><span class="google-g">G</span> Continue with Google</button>
     <p class="auth-terms">New to Spendly? <a href="signup.html">Create an account</a></p>
   </section></main>
+  <script src="validation.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
