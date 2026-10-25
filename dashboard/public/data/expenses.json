@@ -1,0 +1,17 @@
+[
+  { "id": 1,  "date": "2026-10-01", "category": "Housing",   "amount": 12000, "note": "October rent" },
+  { "id": 2,  "date": "2026-10-02", "category": "Groceries", "amount": 1840,  "note": "Weekly vegetables and fruit" },
+  { "id": 3,  "date": "2026-10-03", "category": "Transport", "amount": 320,   "note": "Metro card top-up" },
+  { "id": 4,  "date": "2026-10-04", "category": "Dining",    "amount": 760,   "note": "Dinner with friends" },
+  { "id": 5,  "date": "2026-10-06", "category": "Bills",     "amount": 1450,  "note": "Electricity bill" },
+  { "id": 6,  "date": "2026-10-08", "category": "Groceries", "amount": 1215,  "note": "Monthly staples" },
+  { "id": 7,  "date": "2026-10-09", "category": "Health",    "amount": 540,   "note": "Pharmacy" },
+  { "id": 8,  "date": "2026-10-11", "category": "Shopping",  "amount": 2399,  "note": "Headphones" },
+  { "id": 9,  "date": "2026-10-12", "category": "Transport", "amount": 410,   "note": "Cab to station" },
+  { "id": 10, "date": "2026-10-14", "category": "Dining",    "amount": 380,   "note": "Lunch" },
+  { "id": 11, "date": "2026-10-16", "category": "Bills",     "amount": 699,   "note": "Mobile recharge" },
+  { "id": 12, "date": "2026-10-18", "category": "Groceries", "amount": 1560,  "note": "Weekly shop" },
+  { "id": 13, "date": "2026-10-20", "category": "Shopping",  "amount": 1299,  "note": "Books" },
+  { "id": 14, "date": "2026-10-22", "category": "Health",    "amount": 800,   "note": "Dental check-up" },
+  { "id": 15, "date": "2026-10-24", "category": "Dining",    "amount": 520,   "note": "Weekend brunch" }
+]
