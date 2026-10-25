@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your recent Spendly transactions.">
+  <title>Transactions | Spendly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body class="auth-page">
+  <header class="auth-header"><a class="brand" href="index.html" aria-label="Spendly home"><span class="brand-mark">S</span><span>spendly</span></a><a class="auth-back" href="add-expense.html">← Add expense</a></header>
+  <main class="tx-page">
+    <h1>Recent transactions</h1>
+    <p class="tx-summary"><strong id="txCount">0</strong> expenses · total <strong id="txTotal">₹0</strong></p>
+    <label class="tx-filter">Category
+      <select id="txFilter"><option value="all">All categories</option></select>
+    </label>
+    <p id="txStatus" class="tx-status" aria-live="polite"></p>
+    <ul id="txList" class="tx-list"></ul>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="transactions.js"></script>
+  <script src="filter.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
