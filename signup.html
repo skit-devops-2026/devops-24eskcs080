@@ -17,10 +17,11 @@
   <!-- ===== Sign-Up Form ===== -->
   <main class="auth-layout"><section class="auth-welcome"><p class="eyebrow"><span class="sparkle">✦</span> A fresh start</p><h1>Let’s make money<br><em>feel simpler.</em></h1><p>Tell us a little about yourself. We’ll use it to make your Spendly experience more relevant to your life.</p><div class="auth-note"><span>✦</span><p>Your information stays private and is never sold.</p></div></section>
   <section class="auth-card"><div class="auth-card-heading"><h2>Create your account</h2><p>Already have an account? <a href="login.html">Sign in</a></p></div>
-    <form class="auth-form" data-demo-form data-redirect="add-expense.html">
+    <form class="auth-form" data-demo-form data-validate="signup" novalidate data-redirect="add-expense.html">
       <!-- Personal Details -->
       <div class="form-row"><label>Full name<input type="text" name="name" placeholder="e.g. Priya Sharma" autocomplete="name" required></label><label>Date of birth<input type="date" name="dob" autocomplete="bday" required></label></div>
       <label>Email address<input type="email" name="email" placeholder="you@example.com" autocomplete="email" required></label>
+      <div class="form-row"><label>Password<input type="password" name="password" placeholder="At least 8 characters" autocomplete="new-password" required></label><label>Confirm password<input type="password" name="confirm" placeholder="Repeat password" autocomplete="new-password" required></label></div>
       <!-- Customer Category -->
       <fieldset><legend>What best describes you?</legend><div class="profession-grid"><label class="choice"><input type="radio" name="profession" value="student" required><span>🎓</span><b>Student</b><small>Learning &amp; growing</small></label><label class="choice"><input type="radio" name="profession" value="salaried"><span>💼</span><b>Salaried employee</b><small>Working professional</small></label><label class="choice"><input type="radio" name="profession" value="business"><span>🚀</span><b>Business person</b><small>Building something</small></label><label class="choice"><input type="radio" name="profession" value="retired"><span>🌿</span><b>Retired</b><small>Enjoying the next chapter</small></label></div></fieldset>
       <!-- Type “in” in this dropdown to jump to India (+91). -->
@@ -29,6 +30,7 @@
     </form>
     <p class="auth-terms">By continuing, you agree to our <a href="terms.html">Terms of use</a> and <a href="privacy.html">Privacy policy</a>.</p>
   </section></main>
+  <script src="validation.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
