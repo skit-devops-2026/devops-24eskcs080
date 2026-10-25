@@ -1,6 +1,7 @@
 import { NavLink, Route, Routes } from 'react-router-dom'
 import Dashboard from './pages/Dashboard'
 import Transactions from './pages/Transactions'
+import AddExpense from './pages/AddExpense'
 
 function Layout({ children }) {
   const link = ({ isActive }) =>
@@ -35,7 +36,7 @@ export default function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/add" element={<Placeholder title="Add expense" />} />
+        <Route path="/add" element={<AddExpense />} />
         <Route path="/transactions" element={<Transactions />} />
         <Route path="/budgets" element={<Placeholder title="Budgets" />} />
         <Route path="/profile" element={<Placeholder title="Profile" />} />

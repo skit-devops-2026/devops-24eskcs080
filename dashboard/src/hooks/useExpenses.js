@@ -1,21 +1,14 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { loadExpenses } from '../store/expensesSlice'
 
-// Loads sample expenses once; later this will call the Express API
 export default function useExpenses() {
-  const [expenses, setExpenses] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
+  const dispatch = useDispatch()
+  const { items, status, error } = useSelector((s) => s.expenses)
 
   useEffect(() => {
-    fetch('/data/expenses.json')
-      .then((r) => {
-        if (!r.ok) throw new Error('HTTP ' + r.status)
-        return r.json()
-      })
-      .then(setExpenses)
-      .catch((e) => setError(e.message))
-      .finally(() => setLoading(false))
-  }, [])
+    if (status === 'idle') dispatch(loadExpenses())
+  }, [status, dispatch])
 
-  return { expenses, loading, error }
+  return { expenses: items, loading: status === 'idle' || status === 'loading', error }
 }
