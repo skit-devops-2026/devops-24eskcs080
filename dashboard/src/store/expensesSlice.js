@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 // Later this will call the Express API instead of the JSON file
 export const loadExpenses = createAsyncThunk('expenses/load', async () => {
-  const response = await fetch('/data/expenses.json')
+  const response = await fetch(import.meta.env.BASE_URL + 'data/expenses.json')
   if (!response.ok) throw new Error('HTTP ' + response.status)
   return response.json()
 })
