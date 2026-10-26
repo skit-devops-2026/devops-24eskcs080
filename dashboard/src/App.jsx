@@ -3,6 +3,7 @@ import Dashboard from './pages/Dashboard'
 import Transactions from './pages/Transactions'
 import AddExpense from './pages/AddExpense'
 import Budgets from './pages/Budgets'
+import Profile from './pages/Profile'
 
 function Layout({ children }) {
   const link = ({ isActive }) =>
@@ -40,7 +41,7 @@ export default function App() {
         <Route path="/add" element={<AddExpense />} />
         <Route path="/transactions" element={<Transactions />} />
         <Route path="/budgets" element={<Budgets />} />
-        <Route path="/profile" element={<Placeholder title="Profile" />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<Placeholder title="Page not found" />} />
       </Routes>
     </Layout>
