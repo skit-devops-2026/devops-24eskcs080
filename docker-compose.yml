@@ -3,6 +3,11 @@ services:
     build: .
     ports:
       - "8080:80"
+    depends_on:
+      - api
+
+  api:
+    build: ./backend
 
   blackbox:
     image: prom/blackbox-exporter:latest

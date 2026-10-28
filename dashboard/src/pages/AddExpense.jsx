@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { addExpense } from '../store/expensesSlice'
+import { postExpense } from '../store/expensesSlice'
 import { money } from '../components/format'
 
 const CATEGORIES = ['Housing', 'Groceries', 'Transport', 'Dining', 'Bills', 'Health', 'Shopping']
@@ -25,7 +25,7 @@ export default function AddExpense() {
     return found
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
     const found = validate()
     setErrors(found)
@@ -37,11 +37,16 @@ export default function AddExpense() {
       amount: Math.round(Number(form.amount)),
       note: form.note.trim() || form.category,
     }
-    dispatch(addExpense(expense))
-    setSaved(expense)
-    setForm({ amount: '', category: form.category, date: today(), note: '' })
+    const result = await dispatch(postExpense(expense))
+    if (postExpense.fulfilled.match(result)) {
+      setSaved(expense)
+      setErrors({})
+      setForm({ amount: '', category: form.category, date: today(), note: '' })
+    } else {
+      setSaved(null)
+      setErrors({ amount: 'Could not save: ' + result.error.message })
+    }
   }
-
   const input = 'mt-1 block w-full rounded-lg border border-stone-300 bg-white px-3 py-2'
   const err = 'mt-1 text-sm text-red-700'
 
