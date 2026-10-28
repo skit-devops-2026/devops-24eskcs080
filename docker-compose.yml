@@ -8,6 +8,15 @@ services:
 
   api:
     build: ./backend
+    environment:
+      MONGODB_URI: mongodb://mongo:27017/spendly
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:7
+    volumes:
+      - mongo-data:/data/db
 
   blackbox:
     image: prom/blackbox-exporter:latest
@@ -33,3 +42,6 @@ services:
       - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
     depends_on:
       - prometheus
+
+volumes:
+  mongo-data:
